@@ -13,10 +13,10 @@ class CardGameController extends AbstractController
     #[Route('/card/game', name: 'app_card_game')]
     public function index(CardGameService $cardGameService): Response
     {
-        $randomColorOrder = $cardGameService->getRandomOrder($cardGameService->colors);
-        $randomValueOrder = $cardGameService->getRandomOrder($cardGameService->values);
-        $randomHand = $cardGameService->generateRandomHand();
-        $sortedHand = $cardGameService->sortHand($randomHand, $randomColorOrder, $randomValueOrder);
+        $randomColorOrder = $cardGameService->getRandomOrder($cardGameService->colors); // ordre des couleurs
+        $randomValueOrder = $cardGameService->getRandomOrder($cardGameService->values); // ordre des valeurs
+        $randomHand = $cardGameService->generateRandomHand(); // main non triée
+        $sortedHand = $cardGameService->sortHand($randomHand, $randomColorOrder, $randomValueOrder);// main triée
 
         return $this->render('card_game/index.html.twig', [
             'randomHand' => $randomHand,
