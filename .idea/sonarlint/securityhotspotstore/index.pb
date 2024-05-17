@@ -15,3 +15,5 @@ U
 %tests/Service/CardGameServiceTest.php,f/2/f2c2ead73758ced0e9912312f74d50cc2156d8cc
 [
 +tests/Controller/CardGameControllerTest.php,f/9/f9f20903f868a3c69f7739ef121565a9bae8452b
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d

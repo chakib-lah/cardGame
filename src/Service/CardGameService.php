@@ -8,7 +8,7 @@ class CardGameService
     public array $values = ['As', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Valet', 'Dame', 'Roi'];
 
     /**
-     * Mélanger l'order de tableau random
+     * Mélange un tableau d'éléments et retourne l'ordre mélangé.
      * @param array $items
      * @return array
      */
@@ -20,9 +20,7 @@ class CardGameService
     }
 
     /**
-     * Crée un jeu de cartes complet en combinant chaque couleur avec chaque valeur.
-     * Mélange le jeu de cartes.
-     * Sélectionne les 10 premières cartes du jeu mélangé pour former une main aléatoire.
+     * Génère une main de 10 cartes aléatoires.
      * @return array
      */
     public function generateRandomHand(): array
@@ -38,7 +36,7 @@ class CardGameService
     }
 
     /**
-     * Trie la main de cartes en fonction de l'ordre des couleurs et des valeurs fourni.
+     * Trie la main de cartes selon un ordre spécifique des couleurs et des valeurs.
      * @param array $hand
      * @param array $colorOrder
      * @param array $valueOrder
