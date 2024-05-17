@@ -9,9 +9,14 @@ Ce projet est une application Symfony qui génère une main de 10 cartes aléato
 - Symfony CLI
 
 ## Installation
-1. Extraire le dossier CardGame.tgz :
-   `cd cardGame
-2. Installez les dépendances via Composer si besoin:
+1. Clonez ce dépôt :
+
+   `git clone https://github.com/chakib-lah/cardGame.git`
+
+   `cd cardGame`
+
+2. Installez les dépendances via Composer:
+
    `composer install`
 
 ## Démarrage du serveur de développement
