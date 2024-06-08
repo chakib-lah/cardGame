@@ -9,8 +9,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class CardGameController extends AbstractController
 {
-    #[Route('/', name: 'app_home')]
-    #[Route('/card/game', name: 'app_card_game')]
+    #[Route('/api/card/game', name: 'api_card_game', methods: ['GET'])]
     public function index(CardGameService $cardGameService): Response
     {
         $randomColorOrder = $cardGameService->getRandomOrder($cardGameService->colors); // ordre des couleurs
@@ -18,7 +17,7 @@ class CardGameController extends AbstractController
         $randomHand = $cardGameService->generateRandomHand(); // main non triée
         $sortedHand = $cardGameService->sortHand($randomHand, $randomColorOrder, $randomValueOrder);// main triée
 
-        return $this->render('card_game/index.html.twig', [
+        return $this->json([
             'randomHand' => $randomHand,
             'sortedHand' => $sortedHand,
             'colorOrder' => $randomColorOrder,
