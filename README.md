@@ -7,6 +7,7 @@ Ce projet est une application Symfony qui génère une main de 10 cartes aléato
 - PHP 8.3
 - Composer
 - Symfony CLI
+- Angular CLI
 
 ## Installation
 1. Clonez ce dépôt :
@@ -17,14 +18,32 @@ Ce projet est une application Symfony qui génère une main de 10 cartes aléato
 
 2. Installez les dépendances via Composer:
 
+   `cd cardGame/backend`
+
    `composer install`
 
+3. Insallez les dépendances front via npm
+
+   `cd cardGame/frontend`
+   
+   `npm install`
+
+
+
 ## Démarrage du serveur de développement
-Pour démarrer le serveur de développement Symfony, exécutez :
+* Pour démarrer le serveur de développement Symfony, exécutez :
+
+`cd cardGame/backend`
+
 `symfony server:start`
 
 Visitez http://localhost:8000 dans votre navigateur pour voir l'application en action.
 
+* Pour démarrer frontend, exécutez :
+
+  `cd cardGame/frontend`
+   
+  `ng serve`
 ## Structure du Projet
 
 * src/Service/CardGameService.php : Contient la logique principale pour générer et trier les cartes.
@@ -40,4 +59,6 @@ Pour exécuter les tests, utilisez PHPUnit. Assurez-vous que les dépendances de
 
 Exécutez les tests avec la commande suivante :
 `vendor/bin/phpunit`
+
+Pour frontend éxucuter ng test
 
