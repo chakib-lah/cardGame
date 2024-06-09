@@ -1,0 +1,35 @@
+<div class="container">
+  <h1>Jeu de Cartes</h1>
+
+  <div class="section">
+    <h2>Main non triée</h2>
+    <ul class="cards">
+      <li *ngFor="let card of cardState?.randomHand" class="card">
+        {{ card.color }} - {{ card.value }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Main triée</h2>
+    <ul class="cards">
+      <li *ngFor="let card of cardState?.sortedHand" class="card">
+        {{ card.color }} - {{ card.value }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Ordre des Couleurs</h2>
+    <ul class="order">
+      <li *ngFor="let color of cardState?.colorOrder" class="color">{{ color }}</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Ordre des Valeurs</h2>
+    <ul class="order">
+      <li *ngFor="let value of cardState?.valueOrder" class="value">{{ value }}</li>
+    </ul>
+  </div>
+</div>
