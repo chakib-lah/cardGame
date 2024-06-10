@@ -5,28 +5,32 @@
   font-family: Arial, sans-serif;
 }
 
-h1 {
+.button-container {
   text-align: center;
-  color: #333;
+  margin-bottom: 20px;
 }
 
-.section {
+mat-card {
   margin-bottom: 20px;
 }
 
 .cards, .order {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card, .color, .value {
   background: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 4px;
-  margin: 5px 0;
+  margin: 5px;
   padding: 10px;
   text-align: center;
   transition: transform 0.2s ease-in-out;
+  width: 100px;
 }
 
 .card:hover, .color:hover, .value:hover {
@@ -35,9 +39,6 @@ h1 {
 }
 
 .card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-weight: bold;
   color: #333;
 }
