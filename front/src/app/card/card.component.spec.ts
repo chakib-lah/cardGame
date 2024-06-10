@@ -3,6 +3,7 @@ import { CardComponent } from './card.component';
 import { CardService } from "./services/card.service";
 import { HttpClientTestingModule } from "@angular/common/http/testing";
 import { of } from "rxjs";
+import {MatCardModule} from "@angular/material/card";
 
 describe('CardComponent', () => {
   let component: CardComponent;
@@ -11,10 +12,11 @@ describe('CardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CardComponent, HttpClientTestingModule],
+      declarations: [CardComponent],
+      imports: [HttpClientTestingModule, MatCardModule],
       providers: [CardService]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -71,5 +73,5 @@ describe('CardComponent', () => {
     expect(cardElements[0].textContent).toContain('Carreaux - As');
     expect(cardElements[1].textContent).toContain('Coeur - Roi');
   });
-});
 
+});

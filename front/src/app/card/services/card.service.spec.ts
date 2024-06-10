@@ -1,8 +1,7 @@
 import { TestBed } from '@angular/core/testing';
+
 import { CardService } from './card.service';
-import { HttpClientTestingModule, HttpTestingController } from "@angular/common/http/testing";
-
-
+import {HttpClientTestingModule, HttpTestingController} from "@angular/common/http/testing";
 
 describe('CardService', () => {
   let service: CardService;
@@ -47,8 +46,3 @@ describe('CardService', () => {
     req.flush(mockCardState);
   });
 });
-
-
-
-
-
